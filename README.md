@@ -2,7 +2,9 @@
 
 ## 1. Problem Statement
 
-The objective of this project is to implement and compare five machine learning classification algorithms on the Dry Bean dataset. The project evaluates the performance of each model using six classification metrics and provides an interactive Streamlit web application for model evaluation.
+The objective of this project is to implement and compare five machine learning classification algorithms on the Dry Bean dataset.
+
+The project evaluates the performance of each model using six classification metrics and provides an interactive Streamlit web application for model evaluation.
 
 The five classifiers implemented are:
 
@@ -12,13 +14,16 @@ The five classifiers implemented are:
 4. Gaussian Naive Bayes
 5. Support Vector Machine (SVM)
 
-The application allows users to select a trained model, upload labelled test data in CSV format, and view evaluation metrics, a confusion matrix, and a classification report. The application uses saved models and does not retrain them on uploaded test data.
+The application allows users to select a trained model, upload labelled test data in CSV format, and view evaluation metrics, a confusion matrix, and a classification report.
+
+The application uses saved models and does not retrain them on uploaded test data.
 
 ## 2. Dataset Description
 
 **Dataset:** Dry Bean Dataset
 
-**Source:** UCI Machine Learning Repository  
+**Source:** UCI Machine Learning Repository
+
 **Dataset link:** https://archive.ics.uci.edu/dataset/602/dry+bean
 
 The dataset contains measurements extracted from images of dry bean grains. These measurements are used to classify beans into seven varieties.
@@ -84,15 +89,21 @@ StandardScaler was used in the Logistic Regression, KNN, and SVM pipelines. The 
 
 ## 3. GitHub Repository Link
 
-**Repository URL:** To be added after publishing this project to GitHub.
+**Repository URL:** https://github.com/mahima2071985-alt/dry-bean-classification-ml
 
-The repository will contain the source code, saved models, test dataset, dependency file, and this README.
+The repository contains:
+
+- Complete source code
+- Saved trained models for all five classifiers
+- Training and testing datasets
+- Model comparison results
+- Requirements file
+- README documentation
+- Streamlit application
 
 ## 4. Models Used and Evaluation Results
 
 All five models were trained using the same training set and evaluated on the same held-out test set of 2,723 instances.
-
-The following values are from the local training run.
 
 ### 4.1 Model Comparison Table
 
@@ -104,7 +115,10 @@ The following values are from the local training run.
 | Naive Bayes | 0.7639 | 0.9672 | 0.7744 | 0.7694 | 0.7677 | 0.7154 |
 | Support Vector Machine | 0.9221 | 0.9949 | 0.9359 | 0.9330 | 0.9343 | 0.9059 |
 
-**Metric averaging:** Precision, recall, and F1 use macro averaging. AUC uses macro-averaged one-vs-rest ROC AUC. MCC is the multiclass Matthews correlation coefficient.
+**Metric averaging:**
+- Precision, Recall, and F1 use macro averaging.
+- AUC uses macro-averaged one-vs-rest ROC AUC.
+- MCC is the multiclass Matthews correlation coefficient.
 
 ### 4.2 Observations on Model Performance
 
@@ -134,7 +148,7 @@ SVM performed slightly better than Logistic Regression and KNN on the overall me
 ## 5. Project Structure
 
 ```text
-ml-assignment-2/
+dry-bean-classification-ml/
 ├── data/
 │   └── dry_bean.csv
 ├── models/
@@ -159,7 +173,7 @@ The `.venv` virtual environment is used for local development and should not be 
 
 - Python
 - pip
-- Git (for repository management)
+- Git
 
 ### Install dependencies
 
@@ -196,9 +210,21 @@ The local Streamlit application allows users to select a classifier, upload labe
 
 ## 7. Streamlit Application Link
 
-**Live application URL:** To be added after deployment to Streamlit Community Cloud.
+**Live application URL:**
 
-The deployed application will load the saved models and evaluate uploaded labelled test data without retraining on the uploaded data.
+https://dry-bean-classification-ml-xbfqbzlfw4ebdzwhvtak2q.streamlit.app/
+
+The application is deployed using Streamlit Community Cloud.
+
+It allows users to:
+
+- Select one of the five trained classification models.
+- Upload labelled test data in CSV format.
+- View the evaluation metrics.
+- Inspect the confusion matrix.
+- View the classification report.
+
+The deployed application loads the saved models and evaluates the uploaded labelled test data without retraining the models.
 
 ## 8. Conclusion
 
@@ -208,7 +234,6 @@ The SVM achieved the strongest overall results in the current experiment, follow
 
 The project demonstrates a complete classification workflow, including data preparation, model training, evaluation, model persistence, and interactive application development.
 
-## 9. References
 
-1. Koklu, M., & Ozkan, I. A. (2020). Multiclass Classification of Dry Beans Using Computer Vision and Machine Learning Techniques. *Computers and Electronics in Agriculture, 174*, 105507. https://doi.org/10.1016/j.compag.2020.105507
+
 2. UCI Machine Learning Repository. Dry Bean Dataset. https://archive.ics.uci.edu/dataset/602/dry+bean
